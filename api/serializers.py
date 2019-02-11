@@ -3,17 +3,17 @@ from restaurants.models import Restaurant
 
 class RestaurantListSerializer(serializers.ModelSerializer):
     detail = serializers.HyperlinkedIdentityField(
-        view_name = "restaurant-detail",
+        view_name = "api-detail",
         lookup_field = "id",
         lookup_url_kwarg = "restaurant_id"
         )
     update = serializers.HyperlinkedIdentityField(
-        view_name = "restaurant-update",
+        view_name = "api-update",
         lookup_field = "id",
         lookup_url_kwarg = "restaurant_id"
         )
     delete = serializers.HyperlinkedIdentityField(
-        view_name = "restaurant-delete",
+        view_name = "api-delete",
         lookup_field = "id",
         lookup_url_kwarg = "restaurant_id"
         )
@@ -32,12 +32,12 @@ class RestaurantListSerializer(serializers.ModelSerializer):
 
 class RestaurantDetailSerializer(serializers.ModelSerializer):
     update = serializers.HyperlinkedIdentityField(
-        view_name = "restaurant-update",
+        view_name = "api-update",
         lookup_field = "id",
         lookup_url_kwarg = "restaurant_id"
         )
     delete = serializers.HyperlinkedIdentityField(
-        view_name = "restaurant-delete",
+        view_name = "api-delete",
         lookup_field = "id",
         lookup_url_kwarg = "restaurant_id"
         )
